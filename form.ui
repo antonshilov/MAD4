@@ -39,12 +39,12 @@
       </item>
       <item>
        <property name="text">
-        <string>a1+a2*u1+a2*u2</string>
+        <string>a1+a2*u1</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>nu+a1(u1-u1_)+a2(u2-u2_)</string>
+        <string>a1</string>
        </property>
       </item>
      </widget>
@@ -82,7 +82,7 @@
     <rect>
      <x>20</x>
      <y>160</y>
-     <width>160</width>
+     <width>111</width>
      <height>61</height>
     </rect>
    </property>
@@ -111,7 +111,7 @@
     <rect>
      <x>180</x>
      <y>160</y>
-     <width>160</width>
+     <width>141</width>
      <height>61</height>
     </rect>
    </property>
@@ -135,39 +135,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>60</y>
-     <width>160</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>Graph1</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>Graph</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QPushButton" name="calc_btn">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>220</y>
-     <width>161</width>
-     <height>51</height>
+     <x>350</x>
+     <y>160</y>
+     <width>111</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="text">
@@ -192,9 +166,71 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="object_function"/>
+     <widget class="QLineEdit" name="object_function">
+      <property name="text">
+       <string>4+5*(u1-11)</string>
+      </property>
+     </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QCheckBox" name="is_eq_acc">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>130</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Is disp equally accurate</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>431</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Model</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="model_function">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="graph">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>graph</string>
+   </property>
   </widget>
  </widget>
  <resources/>
