@@ -9,6 +9,7 @@ class Sample:
     true_values = []
     object_values = []
     disp = []
+    model_vals = []
 
 
 def calc(interval, iterations_amount, hidrance_disp, function, is_equally_accurate, var_num, model_type):
@@ -60,7 +61,6 @@ def build_model(sample, model_type):
         model = "{0}+{1}*(u1 - {2})".format(a1, a2, u_)
         return model
     elif model_type == 1:
-        a1 = 0
         x1 = 0
         x2 = 0
         x3 = 0
@@ -69,12 +69,12 @@ def build_model(sample, model_type):
             for j in range(len(sample.input_values)):
                 disp_i = sample.disp[i]
                 disp_j = sample.disp[j]
-                x1 += (sample.object_values[i] * sample.input_values[i] * sample.object_values[j]) / (
+                x1 += (sample.object_values[i] * sample.input_values[i] * sample.input_values[j]) / (
                     disp_i * disp_j)
-                x2 += (sample.object_values[i] * sample.input_values[j] * sample.object_values[j]) / (
+                x2 += (sample.object_values[i] * sample.input_values[j] * sample.input_values[j]) / (
                     disp_i * disp_j)
-                x3 += (sample.input_values[i] * sample.object_values[j]) / (disp_i * disp_j)
-                x4 += (sample.input_values[i] * sample.object_values[i]) / (disp_i * disp_j)
+                x3 += (sample.input_values[i] * sample.input_values[j]) / (disp_i * disp_j)
+                x4 += (sample.input_values[i] * sample.input_values[i]) / (disp_i * disp_j)
         a1 = (x1 - x2) / (x3 - x4)
         x1 = 0
         x2 = 0
@@ -112,4 +112,4 @@ def calc_function(val, f):
     u1 = val
     return eval(f)
 
-# calc(10, 100, 10, '4', False, 1, 2)
+# calc(10, 100, 10, '140+4.98*u1', True, 1, 2)

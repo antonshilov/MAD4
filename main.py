@@ -17,6 +17,7 @@ class MainWindow(MainWindowSlots):
     # Подключаем слоты к виджетам
     def connect_slots(self):
         self.calc_btn.clicked.connect(self.calc)
+        self.graph_btn.clicked.connect(self.graph)
         return None
 
 

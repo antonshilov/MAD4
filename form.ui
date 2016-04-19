@@ -219,7 +219,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="graph">
+  <widget class="QPushButton" name="graph_btn">
    <property name="geometry">
     <rect>
      <x>280</x>

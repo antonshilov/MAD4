@@ -94,9 +94,9 @@ class Ui_Form(object):
         self.model_function.setReadOnly(True)
         self.model_function.setObjectName("model_function")
         self.horizontalLayout_5.addWidget(self.model_function)
-        self.graph = QtWidgets.QPushButton(Form)
-        self.graph.setGeometry(QtCore.QRect(280, 70, 99, 27))
-        self.graph.setObjectName("graph")
+        self.graph_btn = QtWidgets.QPushButton(Form)
+        self.graph_btn.setGeometry(QtCore.QRect(280, 70, 99, 27))
+        self.graph_btn.setObjectName("graph_btn")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -117,4 +117,4 @@ class Ui_Form(object):
         self.object_function.setText(_translate("Form", "4+5*(u1-11)"))
         self.is_eq_acc.setText(_translate("Form", "Is disp equally accurate"))
         self.label_6.setText(_translate("Form", "Model"))
-        self.graph.setText(_translate("Form", "graph"))
+        self.graph_btn.setText(_translate("Form", "graph"))

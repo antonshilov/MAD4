@@ -4,6 +4,8 @@ from ui import Ui_Form
 
 
 class MainWindowSlots(Ui_Form):
+    sample = calc.Sample()
+
     def calc(self):
         function = self.object_function.text()
         model_type = self.function_type.currentIndex()
@@ -14,9 +16,14 @@ class MainWindowSlots(Ui_Form):
         res = calc.calc(inter, iterations, disp, function, is_eq, 1, model_type)
         model = res['model']
         self.model_function.setText(model)
-        sample = res["sample"]
+        self.sample = res["sample"]
         model_res = []
-        for i in sample.input_values:
+        for i in self.sample.input_values:
             model_res.append(calc.calc_function(i, model))
-        graph.graph(sample.input_values, sample.true_values, sample.object_values, model_res)
+        self.sample.model_vals = model_res
+        return None
+
+    def graph(self):
+        graph.graph(self.sample.input_values, self.sample.true_values, self.sample.object_values,
+                    self.sample.model_vals)
         return None
